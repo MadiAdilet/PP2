@@ -30,7 +30,7 @@ class Food:
         # Случайный выбор типа еды с разными вероятностями
         self.type = random.choices(
             ['normal', 'bonus', 'timed'], 
-            weights=[70, 20, 10],  # Вероятности появления: 70%, 20%, 10%
+            weights=[70, 20, 10],  \
             k=1
         )[0]
         
@@ -146,7 +146,6 @@ game_active = True  # Состояние игры
 # Основной игровой цикл
 running = True
 while running:
-    # Обработка событий
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -180,7 +179,7 @@ while running:
         # Проверка съедания еды
         if [snake.x, snake.y] == [current_food.x, current_food.y]:
             snake.grow(current_food.points)
-            current_food = Food()  # Новая еда
+            current_food = Food()  
         elif current_food.is_expired():  # Проверка истечения времени еды
             current_food = Food()
         

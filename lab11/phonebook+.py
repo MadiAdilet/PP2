@@ -4,7 +4,7 @@ def connect():
     return psycopg2.connect(
         dbname="Tsk_2",
         user="postgres",
-        password="123456",
+        password="lakid589",
         host="localhost",
         port="5432"
     )
@@ -37,7 +37,7 @@ def connect():
     return psycopg2.connect(
         dbname="Tsk_2",  # Заменить на имя своей базы данных
         user="postgres",  # Заменить на имя пользователя
-        password="123456",  # Заменить на свой пароль
+        password="lakid589",  # Заменить на свой пароль
         host="localhost",  # Или IP сервера
         port="5432",  # Порт по умолчанию для PostgreSQL
         options="-c client_encoding=utf8"
